@@ -1,0 +1,31 @@
+{
+  "name": "@jev-router/mcp-server",
+  "version": "0.1.0",
+  "description": "JevRouter MCP server — exposes routing decision and model catalog as MCP tools (no frontend)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "jev-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@jev-router/backend": "workspace:*",
+    "@jev-router/shared": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15"
+  },
+  "license": "UNLICENSED"
+}

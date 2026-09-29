@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JevRouter 模型配置",
+  "type": "object",
+  "required": ["configVersion", "jev", "llmLibrary", "storage", "routing"],
+  "properties": {
+    "configVersion": { "type": "string" },
+    "description": { "type": "string" },
+    "jev": {
+      "type": "object",
+      "required": ["baseUrl", "apiKey"],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "baseUrl": { "type": "string", "format": "uri" },
+        "apiKey": { "type": "string", "minLength": 1 },
+        "authHeader": { "type": "string" },
+        "authScheme": { "type": "string" },
+        "timeoutMs": { "type": "number", "exclusiveMinimum": 0 },
+        "maxRetries": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "llmLibrary": {
+      "type": "object",
+      "required": ["apiKey", "baseUrl"],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "apiKey": { "type": "string", "minLength": 1 },
+        "baseUrl": { "type": "string", "format": "uri" },
+        "modelsApi": { "type": "string" },
+        "chatCompletionsApi": { "type": "string" },
+        "responsesApi": { "type": "string" },
+        "authHeader": { "type": "string" },
+        "authScheme": { "type": "string" },
+        "timeoutMs": { "type": "number", "exclusiveMinimum": 0 },
+        "maxRetries": { "type": "integer", "minimum": 0 },
+        "useResponsesApi": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "storage": {
+      "type": "object",
+      "required": ["dataDir"],
+      "properties": {
+        "dataDir": { "type": "string" },
+        "decisionStoreFile": { "type": "string" },
+        "modelInfoFile": { "type": "string" },
+        "historyDir": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "routing": {
+      "type": "object",
+      "required": ["thresholds"],
+      "properties": {
+        "preference": { "type": "string", "enum": ["economy", "balanced", "quality"] },
+        "thresholds": {
+          "type": "object",
+          "required": ["high", "mid"],
+          "properties": {
+            "high": { "type": "number", "minimum": 0, "maximum": 1 },
+            "mid": { "type": "number", "minimum": 0, "maximum": 1 }
+          },
+          "additionalProperties": false
+        },
+        "maxTokens": { "type": "integer", "exclusiveMinimum": 0 },
+        "temperature": { "type": "number", "minimum": 0, "maximum": 2 }
+      },
+      "additionalProperties": false
+    },
+    "modelScoring": {
+      "type": "object",
+      "description": "模型清单刷新与业界评分同步",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "dailySyncAt": { "type": "string", "pattern": "^([01]?\\d|2[0-3]):[0-5]\\d$" },
+        "catalogRefreshTtlMs": { "type": "integer", "minimum": 0 },
+        "catalogFetchTimeoutMs": { "type": "integer", "exclusiveMinimum": 0 },
+        "industryRatings": {
+          "type": "object",
+          "description": "业界评分来源：web（互联网榜单）→ api → file",
+          "properties": {
+            "web": {
+              "type": "object",
+              "properties": {
+                "enabled": { "type": "boolean" },
+                "url": { "type": "string" },
+                "maxPages": { "type": "integer", "exclusiveMinimum": 0 },
+                "pageSize": { "type": "integer", "exclusiveMinimum": 0 },
+                "timeoutMs": { "type": "integer", "exclusiveMinimum": 0 }
+              },
+              "additionalProperties": false
+            },
+            "file": { "type": "string" },
+            "api": { "type": "string" },
+            "timeoutMs": { "type": "integer", "exclusiveMinimum": 0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

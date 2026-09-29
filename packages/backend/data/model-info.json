@@ -1,0 +1,1141 @@
+{
+  "infoVersion": "1.0.0",
+  "updatedAt": "2026-10-11T01:27:40.783Z",
+  "catalogVersion": "live-20-43ef6fd7",
+  "source": "models-api",
+  "models": [
+    {
+      "modelId": "hy4-preview-f",
+      "label": "hy4-preview-f",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "hy4-preview-f",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.59,
+        "latency": 0.82,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0,
+        "outputPricePer1k": 0,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "tencent",
+        "vendorLabel": "腾讯混元",
+        "load": 0,
+        "profileVersion": "live-0-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.168,
+        "profileSpread": 0.163,
+        "winConcentration": 0.02,
+        "evidenceConfidence": 0.44,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 2,
+        "candidateCount": 92,
+        "winRate": 0.021739130434782608,
+        "avgProbability": 0.054793510737349296,
+        "avgConfidence": 0.44,
+        "avgLatencyMs": 1997
+      },
+      "industry": {
+        "score": 0.7,
+        "source": "内部画像加权",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.782Z"
+    },
+    {
+      "modelId": "hy3",
+      "label": "hy3",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "hy3",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call"
+        ],
+        "capability": 0.9,
+        "quality": 0.85,
+        "cost": 0.59,
+        "latency": 0.82,
+        "contextWindow": 192000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0,
+        "outputPricePer1k": 0,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "tencent",
+        "vendorLabel": "腾讯混元",
+        "load": 0,
+        "profileVersion": "live-1-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.086,
+        "profileSpread": 0.191,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 92,
+        "winRate": 0,
+        "avgProbability": 0.05451778308132072,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.618,
+        "rank": 77,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.782Z"
+    },
+    {
+      "modelId": "deepseek-v4.1-flash",
+      "label": "deepseek-v4.1-flash",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "deepseek-v4.1-flash",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "code",
+          "long-context",
+          "low-cost"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.15,
+        "latency": 0.67,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0,
+        "outputPricePer1k": 0,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "deepseek",
+        "vendorLabel": "DeepSeek",
+        "load": 0,
+        "profileVersion": "live-2-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.519,
+        "profileSpread": 0.472,
+        "winConcentration": 0.47,
+        "evidenceConfidence": 0.713,
+        "coldStart": false,
+        "rating": "中"
+      },
+      "stats": {
+        "selectedCount": 47,
+        "candidateCount": 93,
+        "winRate": 0.5053763440860215,
+        "avgProbability": 0.06493605659847297,
+        "avgConfidence": 0.7125531914893616,
+        "avgLatencyMs": 4691
+      },
+      "industry": {
+        "score": 0.819,
+        "rank": 37,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.782Z"
+    },
+    {
+      "modelId": "gpt-6-astra",
+      "label": "gpt-6-astra",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "gpt-6-astra",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "long-context"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.59,
+        "latency": 0.83,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "openai",
+        "vendorLabel": "OpenAI",
+        "load": 0,
+        "profileVersion": "live-3-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.078,
+        "profileSpread": 0.173,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 71,
+        "winRate": 0,
+        "avgProbability": 0.05069750968060235,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.633,
+        "rank": 74,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.782Z"
+    },
+    {
+      "modelId": "gpt-5.6-sol",
+      "label": "gpt-5.6-sol",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "gpt-5.6-sol",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "long-context"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.59,
+        "latency": 0.53,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "openai",
+        "vendorLabel": "OpenAI",
+        "load": 0,
+        "profileVersion": "live-4-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.133,
+        "profileSpread": 0.295,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 71,
+        "winRate": 0,
+        "avgProbability": 0.04790977571235135,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.794,
+        "rank": 42,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "gpt-5.6-terra",
+      "label": "gpt-5.6-terra",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "gpt-5.6-terra",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.59,
+        "latency": 0.53,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "openai",
+        "vendorLabel": "OpenAI",
+        "load": 0,
+        "profileVersion": "live-5-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.133,
+        "profileSpread": 0.295,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 71,
+        "winRate": 0,
+        "avgProbability": 0.04790977571235135,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.719,
+        "rank": 57,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "gpt-5.6-luna",
+      "label": "gpt-5.6-luna",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "gpt-5.6-luna",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.59,
+        "latency": 0.53,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "openai",
+        "vendorLabel": "OpenAI",
+        "load": 0,
+        "profileVersion": "live-6-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.133,
+        "profileSpread": 0.295,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 71,
+        "winRate": 0,
+        "avgProbability": 0.04790977571235135,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.543,
+        "rank": 92,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "gpt-5.5",
+      "label": "gpt-5.5",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "gpt-5.5",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "long-context"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.59,
+        "latency": 0.83,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "openai",
+        "vendorLabel": "OpenAI",
+        "load": 0,
+        "profileVersion": "live-7-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.299,
+        "profileSpread": 0.173,
+        "winConcentration": 0.13,
+        "evidenceConfidence": 0.88,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 13,
+        "candidateCount": 71,
+        "winRate": 0.18309859154929578,
+        "avgProbability": 0.05065898928010199,
+        "avgConfidence": 0.8800000000000001,
+        "avgLatencyMs": 17267
+      },
+      "industry": {
+        "score": 0.834,
+        "rank": 34,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "gpt-5.4",
+      "label": "gpt-5.4",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "gpt-5.4",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "long-context"
+        ],
+        "capability": 0.91,
+        "quality": 0.86,
+        "cost": 0.59,
+        "latency": 0.82,
+        "contextWindow": 272000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "openai",
+        "vendorLabel": "OpenAI",
+        "load": 0,
+        "profileVersion": "live-8-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.076,
+        "profileSpread": 0.17,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 71,
+        "winRate": 0,
+        "avgProbability": 0.050437365818707426,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.769,
+        "rank": 47,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "grok-4.7",
+      "label": "grok-4.7",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "grok-4.7",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "code"
+        ],
+        "capability": 0.91,
+        "quality": 0.87,
+        "cost": 0.59,
+        "latency": 0.83,
+        "contextWindow": 500000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "xai",
+        "vendorLabel": "xAI",
+        "load": 0,
+        "profileVersion": "live-9-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.272,
+        "profileSpread": 0.178,
+        "winConcentration": 0.01,
+        "evidenceConfidence": 0.94,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 1,
+        "candidateCount": 71,
+        "winRate": 0.014084507042253521,
+        "avgProbability": 0.05537990092552453,
+        "avgConfidence": 0.94,
+        "avgLatencyMs": 168229
+      },
+      "industry": {
+        "score": 0.236,
+        "rank": 153,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "gemini-3.5-flash",
+      "label": "gemini-3.5-flash",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "gemini-3.5-flash",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "low-cost"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.15,
+        "latency": 0.66,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0023,
+        "outputPricePer1k": 0.0058,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "google",
+        "vendorLabel": "Google",
+        "load": 0,
+        "profileVersion": "live-10-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.217,
+        "profileSpread": 0.483,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 71,
+        "winRate": 0,
+        "avgProbability": 0.05230471159875317,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.92,
+        "rank": 17,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "glm-5.3-flash",
+      "label": "glm-5.3-flash",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "glm-5.3-flash",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "low-cost"
+        ],
+        "capability": 0.92,
+        "quality": 0.86,
+        "cost": 0.15,
+        "latency": 0.65,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0023,
+        "outputPricePer1k": 0.0058,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "zhipu",
+        "vendorLabel": "智谱 GLM",
+        "load": 0,
+        "profileVersion": "live-11-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.223,
+        "profileSpread": 0.495,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 92,
+        "winRate": 0,
+        "avgProbability": 0.055698422134501595,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.859,
+        "rank": 29,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "glm-5.3",
+      "label": "glm-5.3",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "glm-5.3",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.59,
+        "latency": 0.81,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "zhipu",
+        "vendorLabel": "智谱 GLM",
+        "load": 0,
+        "profileVersion": "live-12-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.209,
+        "profileSpread": 0.152,
+        "winConcentration": 0.04,
+        "evidenceConfidence": 0.635,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 4,
+        "candidateCount": 92,
+        "winRate": 0.043478260869565216,
+        "avgProbability": 0.0547198001529407,
+        "avgConfidence": 0.635,
+        "avgLatencyMs": 41107
+      },
+      "industry": {
+        "score": 0.869,
+        "rank": 27,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "glm-5.2",
+      "label": "glm-5.2",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "glm-5.2",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "long-context"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.59,
+        "latency": 0.51,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "zhipu",
+        "vendorLabel": "智谱 GLM",
+        "load": 0,
+        "profileVersion": "live-13-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.337,
+        "profileSpread": 0.316,
+        "winConcentration": 0.09,
+        "evidenceConfidence": 0.816,
+        "coldStart": false,
+        "rating": "中"
+      },
+      "stats": {
+        "selectedCount": 9,
+        "candidateCount": 99,
+        "winRate": 0.09090909090909091,
+        "avgProbability": 0.07856035879073217,
+        "avgConfidence": 0.8155555555555556,
+        "avgLatencyMs": 6586
+      },
+      "industry": {
+        "score": 0.849,
+        "rank": 31,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "kimi-k3",
+      "label": "kimi-k3",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "kimi-k3",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "long-context"
+        ],
+        "capability": 0.92,
+        "quality": 0.86,
+        "cost": 0.59,
+        "latency": 0.81,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "moonshot",
+        "vendorLabel": "月之暗面 Kimi",
+        "load": 0,
+        "profileVersion": "live-14-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.069,
+        "profileSpread": 0.154,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 72,
+        "winRate": 0,
+        "avgProbability": 0.05313934852351678,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.884,
+        "rank": 24,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "kimi-k2.6",
+      "label": "kimi-k2.6",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "kimi-k2.6",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call"
+        ],
+        "capability": 0.91,
+        "quality": 0.85,
+        "cost": 0.59,
+        "latency": 0.81,
+        "contextWindow": 256000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "moonshot",
+        "vendorLabel": "月之暗面 Kimi",
+        "load": 0,
+        "profileVersion": "live-15-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.076,
+        "profileSpread": 0.17,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 92,
+        "winRate": 0,
+        "avgProbability": 0.05440768919950395,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.789,
+        "rank": 43,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "kimi-k2.8-preview",
+      "label": "kimi-k2.8-preview",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "kimi-k2.8-preview",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "long-context"
+        ],
+        "capability": 0.92,
+        "quality": 0.86,
+        "cost": 0.59,
+        "latency": 0.81,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "moonshot",
+        "vendorLabel": "月之暗面 Kimi",
+        "load": 0,
+        "profileVersion": "live-16-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.069,
+        "profileSpread": 0.154,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 92,
+        "winRate": 0,
+        "avgProbability": 0.054640620701527504,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.4,
+        "source": "内部画像加权",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "gpt-6.1-sol",
+      "label": "gpt-6.1-sol",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "gpt-6.1-sol",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "code"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.59,
+        "latency": 0.83,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "openai",
+        "vendorLabel": "OpenAI",
+        "load": 0,
+        "profileVersion": "live-17-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.078,
+        "profileSpread": 0.173,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 62,
+        "winRate": 0,
+        "avgProbability": 0.054226894749625144,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.714,
+        "rank": 58,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "gpt-6-sol",
+      "label": "gpt-6-sol",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "gpt-6-sol",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call",
+          "code"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.59,
+        "latency": 0.83,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "openai",
+        "vendorLabel": "OpenAI",
+        "load": 0,
+        "profileVersion": "live-18-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.32,
+        "profileSpread": 0.173,
+        "winConcentration": 0.12,
+        "evidenceConfidence": 1,
+        "coldStart": false,
+        "rating": "中"
+      },
+      "stats": {
+        "selectedCount": 12,
+        "candidateCount": 63,
+        "winRate": 0.19047619047619047,
+        "avgProbability": 0.05962119812319216,
+        "avgConfidence": 1,
+        "avgLatencyMs": 5587
+      },
+      "industry": {
+        "score": 0.211,
+        "rank": 158,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    },
+    {
+      "modelId": "gpt-6-luna",
+      "label": "gpt-6-luna",
+      "fromLiveCatalog": true,
+      "profile": {
+        "modelId": "gpt-6-luna",
+        "provider": "llm-library",
+        "capabilityTags": [
+          "reasoning",
+          "vision",
+          "tool-call"
+        ],
+        "capability": 0.92,
+        "quality": 0.87,
+        "cost": 0.59,
+        "latency": 0.83,
+        "contextWindow": 1000000,
+        "health": "healthy",
+        "p95LatencyMs": 300000,
+        "inputPricePer1k": 0.0076,
+        "outputPricePer1k": 0.0181,
+        "modalities": [
+          "text",
+          "image"
+        ],
+        "dataRegion": [],
+        "vendor": "openai",
+        "vendorLabel": "OpenAI",
+        "load": 0,
+        "profileVersion": "live-19-mv358lw7",
+        "enabled": true
+      },
+      "discrimination": {
+        "score": 0.078,
+        "profileSpread": 0.173,
+        "winConcentration": 0,
+        "evidenceConfidence": 0,
+        "coldStart": false,
+        "rating": "低"
+      },
+      "stats": {
+        "selectedCount": 0,
+        "candidateCount": 62,
+        "winRate": 0,
+        "avgProbability": 0.04929347109942773,
+        "avgConfidence": 0,
+        "avgLatencyMs": 0
+      },
+      "industry": {
+        "score": 0.181,
+        "rank": 164,
+        "source": "LMArena 总榜（HuggingFace leaderboard-dataset）",
+        "ratedAt": "2026-10-11T01:21:00.035Z"
+      },
+      "updatedAt": "2026-10-11T01:27:40.783Z"
+    }
+  ]
+}

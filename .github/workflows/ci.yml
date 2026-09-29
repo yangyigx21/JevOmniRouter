@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck shared
+        run: npx tsc --project packages/shared/tsconfig.json --noEmit
+
+      - name: Typecheck backend
+        run: npx tsc --project packages/backend/tsconfig.json --noEmit
+
+      - name: Typecheck mcp-server
+        run: npx tsc --project packages/mcp-server/tsconfig.json --noEmit
+
+      - name: Typecheck frontend
+        run: npx tsc --project packages/frontend/tsconfig.json --noEmit
+
+      - name: Run tests
+        run: npx vitest run
+
+      - name: Build frontend
+        run: cd packages/frontend && npx vite build

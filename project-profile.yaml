@@ -1,0 +1,62 @@
+schema_version: "2.1"
+
+sdd:
+  design-mode: direct
+
+project:
+  name: "jev-router"
+  display_name: "JevRouter"
+  description: "JevRouter — TypeSafe Jev 驱动多模型智能路由（融合版）。Node.js + TypeScript 后端 + Vue 3 前端 + 共享纯逻辑层。"
+
+repositories:
+  - name: "jev-router"
+    path: "packages"
+    type: "fullstack"
+    language: "typescript"
+    framework: "Node.js + TypeScript + Vue 3"
+    display_name: "JevRouter 主工程"
+    frontend_type: "vue3"
+
+architecture:
+  build_tool: "pnpm"
+  workspace_layout: "monorepo"
+  packages:
+    - name: "shared"
+      path: "packages/shared"
+      description: "纯逻辑层（特征提取 / 校准 / 路由 / 打分 / 经验闭环 / 几何 / 时间线）"
+    - name: "backend"
+      path: "packages/backend"
+      description: "服务端核心（Jev Adapter / Decision Validator / Constraint Selector / Model Gateway / Experience Store）"
+    - name: "frontend"
+      path: "packages/frontend"
+      description: "Vue 3 + Vite 前端（3D 树可视化、事件流 SSE、内联结果）"
+
+tools:
+  gitnexus:
+    available: false
+  mcp_clients:
+    trae: true
+
+frontend:
+  pc:
+    framework: "Vue 3 + Vite"
+    source_root: "packages/frontend/src/"
+
+backend:
+  runtime: "node"
+  language: "typescript"
+  source_root: "packages/backend/src/"
+
+shared:
+  language: "typescript"
+  source_root: "packages/shared/src/"
+
+paths:
+  ddl_directory:          ".ai-sdd/artifacts/changes/{change-name}/sql/"
+  db_config_location:     ".ai-sdd/artifacts/changes/{change-name}/db/"
+  e2e_directory:          ".ai-sdd/artifacts/changes/{change-name}/e2e/"
+  test_source_directory:  ".ai-sdd/artifacts/changes/{change-name}/test-sources/{repo}/"
+  test_cases_directory:   ".ai-sdd/artifacts/changes/{change-name}/test-cases/{repo}/"
+  test_data_directory:    ".ai-sdd/artifacts/changes/{change-name}/test-data/{repo}/"
+  test_runner_directory:  ".ai-sdd/artifacts/changes/{change-name}/runners/{repo}/"
+  test_report_directory:  ".ai-sdd/artifacts/changes/{change-name}/reports/{repo}/"

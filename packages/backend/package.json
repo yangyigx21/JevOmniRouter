@@ -1,0 +1,41 @@
+{
+  "name": "@jev-router/backend",
+  "version": "0.1.0",
+  "description": "JevRouter backend service (Jev Adapter, Decision Runtime, Constraint Selector, Model Gateway)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "config"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "rimraf dist",
+    "test": "vitest run",
+    "start": "node dist/main.js",
+    "dev": "tsx src/main.ts"
+  },
+  "dependencies": {
+    "@jev-router/shared": "workspace:*",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "tsx": "^4.23.15"
+  },
+  "sideEffects": false,
+  "license": "UNLICENSED"
+}

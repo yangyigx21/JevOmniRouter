@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.js.map
+*.d.ts
+*.d.ts.map
+*.tsbuildinfo
+!.vscode/
+coverage/
+.env
+.env.local
+.env.*.local

@@ -1,0 +1,166 @@
+# 分身技能注册表 — 唯一真相源
+# 每个分身定义：name（中文名）、entry_skill（入口技能，无则 null）、skills（所需技能名称列表）
+# skills 列表中的值即技能名称（skillName），可直接传给 download_skills_parallel / update_skill 的 skillNames 参数
+# 新增分身只需在此追加一条记录，分身 prompt 中引用 SKILL.md 即可
+
+agents:
+  agent-e2e-test:
+    name: E2E测试分身
+    entry_skill: null
+    skills:
+      - test-case-generator
+      - test-case-runner
+      - test-api-runner
+      - test-unit-runner
+
+  agent-project-analysis:
+    name: 代码分析分身
+    entry_skill: null
+    skills:
+      - ca-pending-code-reviewer
+      - ca-custom-rules-manager
+      - ca-state-manager
+      - ca-code-quality
+      - ca-architecture-review
+      - ca-performance-analyzer
+      - ca-security-scanner
+      - ca-report-aggregator
+      - ca-log-analyzer
+
+  agent-fullstack-architect:
+    name: 全栈开发分身
+    entry_skill: null
+    skills:
+      - sdd-development-workflow
+      - activiti-workflow-generator
+      - appframe
+      - code-review
+      - create_api_doc
+      - create-appframe-bo
+      - csf-boot-create
+      - csf-production
+      - csf-service-registration
+      - ddl_to_java_generator
+      - generate-soa-service
+      - group-test-db-query
+      - java-local-search
+      - task_plus_dev
+      - task_rule_dev
+      - agent-frontend-architect
+      - touchui2
+      - touchvue2
+
+  agent-backend-architect:
+    name: 后端开发分身
+    entry_skill: null
+    skills:
+      - activiti-workflow-generator
+      - appframe
+      - code-review
+      - create_api_doc
+      - create-appframe-bo
+      - csf-boot-create
+      - csf-production
+      - csf-service-registration
+      - ddl_to_java_generator
+      - generate-soa-service
+      - group-test-db-query
+      - java-local-search
+      - task_plus_dev
+      - task_rule_dev
+
+  agent-prototype-designer:
+    name: 原型设计分身
+    entry_skill: null
+    skills:
+      - prototype-designer
+
+  agent-frontend-architect:
+    name: 前端开发分身
+    entry_skill: null
+    skills:
+      - agent-frontend-architect
+      - touchui2
+      - touchvue2
+
+  agent-technical-designer:
+    name: 技术设计分身
+    entry_skill: null
+    skills:
+      - technical-designer
+
+  agent-auto-controller:
+    name: 调度分身
+    entry_skill: null
+    skills:
+      - agent-lightsdd-orchestrator
+      - agent-fullsdd-orchestrator
+      - activiti-workflow-generator
+      - ai-apply-change
+      - ai-archive-change
+      - ai-create-e2e
+      - ai-design-change
+      - ai-new-change
+      - ai-pre-code-review
+      - ai-prepare-change
+      - ai-proposal-change
+      - ai-refine-change
+      - ai-sdd-check
+      - ai-sdd-init
+      - ai-sdd-repo-add
+      - ai-sdd-repo-del
+      - ai-sdd-update
+      - ai-tasks-change
+      - ai-verify-change
+      - agent-frontend-architect
+      - touchui2
+      - touchvue2
+      - appframe
+      - ca-architecture-review
+      - ca-code-quality
+      - ca-custom-rules-manager
+      - ca-log-analyzer
+      - ca-pending-code-reviewer
+      - ca-performance-analyzer
+      - ca-report-aggregator
+      - ca-security-scanner
+      - ca-state-manager
+      - code-api-discover
+      - code-arch-scan
+      - code-review
+      - code-table-discover
+      - context-bootstrap
+      - context-discover
+      - context-gitcommit
+      - context-harvest
+      - context-review
+      - context-update
+      - create_api_doc
+      - create-appframe-bo
+      - csf-boot-create
+      - csf-production
+      - csf-service-registration
+      - ddl_to_java_generator
+      - generate-soa-service
+      - group-test-db-query
+      - java-local-search
+      - openspec-apply-change
+      - openspec-archive-change
+      - openspec-bulk-archive-change
+      - openspec-continue-change
+      - openspec-explore
+      - openspec-ff-change
+      - openspec-new-change
+      - openspec-onboard
+      - openspec-propose
+      - openspec-sync-specs
+      - openspec-verify-change
+      - prototype-designer
+      - sdd-distribute-assets
+      - task_plus_dev
+      - task_rule_dev
+      - technical-designer
+      - test-api-runner
+      - test-case-generator
+      - test-case-runner
+      - test-unit-runner

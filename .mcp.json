@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "jev-router": {
+      "command": "node",
+      "args": ["packages/mcp-server/dist/index.js"],
+      "env": {
+        "JEV_BACKEND_URL": "http://127.0.0.1:3000"
+      }
+    }
+  }
+}

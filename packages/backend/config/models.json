@@ -1,0 +1,62 @@
+{
+  "$schema": "./models.schema.json",
+  "configVersion": "1.0.0",
+  "description": "Jev 多模型智能路由中枢 —— 模型配置。记录系统内可调用的模型信息，供代码实际执行调用。密钥仅存服务端（C3），前端接口一律脱敏。请勿在此文件写入真实密钥：通过环境变量 JEV_API_KEY / LLM_API_KEY 注入。",
+  "jev": {
+    "id": "typesafe-system-one",
+    "label": "TypeSafe Jev (System One)",
+    "baseUrl": "https://api.typesafe.ai/v1/systemone",
+    "apiKey": "",
+    "authHeader": "Authorization",
+    "authScheme": "Bearer",
+    "timeoutMs": 30000,
+    "maxRetries": 1
+  },
+  "llmLibrary": {
+    "id": "local-llm-gateway",
+    "label": "LLM 模型库 (OpenAI 兼容网关)",
+    "apiKey": "",
+    "baseUrl": "http://127.0.0.1:8788/v1",
+    "modelsApi": "http://127.0.0.1:8788/v1/models",
+    "chatCompletionsApi": "/v1/chat/completions",
+    "responsesApi": "/v1/responses",
+    "authHeader": "Authorization",
+    "authScheme": "Bearer",
+    "timeoutMs": 600000,
+    "maxRetries": 1,
+    "useResponsesApi": false
+  },
+  "storage": {
+    "dataDir": "../data",
+    "decisionStoreFile": "decision-store.json",
+    "modelInfoFile": "model-info.json",
+    "historyDir": "history"
+  },
+  "routing": {
+    "preference": "balanced",
+    "thresholds": {
+      "high": 0.82,
+      "mid": 0.6
+    },
+    "maxTokens": 16384,
+    "temperature": 0.3
+  },
+  "modelScoring": {
+    "enabled": true,
+    "dailySyncAt": "00:00",
+    "catalogRefreshTtlMs": 300000,
+    "catalogFetchTimeoutMs": 8000,
+    "industryRatings": {
+      "web": {
+        "enabled": true,
+        "url": "https://datasets-server.huggingface.co/rows?dataset=lmarena-ai%2Fleaderboard-dataset&config=text&split=latest",
+        "maxPages": 3,
+        "pageSize": 100,
+        "timeoutMs": 15000
+      },
+      "file": "../data/industry-ratings.json",
+      "api": "",
+      "timeoutMs": 8000
+    }
+  }
+}

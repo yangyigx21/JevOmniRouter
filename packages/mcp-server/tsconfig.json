@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "composite": true,
+    "paths": {
+      "@jev-router/backend": ["../backend/src/index.ts"],
+      "@jev-router/shared": ["../shared/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*"],
+  "references": [{ "path": "../shared" }, { "path": "../backend" }]
+}

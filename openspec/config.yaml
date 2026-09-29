@@ -1,0 +1,56 @@
+schema: spec-driven
+
+context: |
+  本项目是 JevRouter — TypeSafe Jev 驱动多模型智能路由（融合版）。
+  技术形态：Node.js + TypeScript 后端 + Vue 3 + Vite 前端 + 共享 TypeScript 纯逻辑层（monorepo）。
+
+  工作区布局：
+  - packages/shared   纯逻辑层（特征提取 / 校准 / 路由 / 打分 / 经验闭环 / 几何 / 时间线）
+  - packages/backend  服务端核心（Jev Adapter / Decision Validator / Constraint Selector / Model Gateway / Experience Store / Event Stream）
+  - packages/frontend Vue 3 + Vite 前端（3D 树可视化 / SSE / 内联结果）
+
+  scope 判定：
+  - 纯逻辑层（packages/shared）→ shared
+  - 服务端（packages/backend）→ backend
+  - 前端（packages/frontend）→ frontend-pc
+  - 跨多包任务 → 同时使用对应 scope
+
+  全局原则：
+  - 工作流程：proposal → specs → design → tasks → apply → verify → archive。
+  - 功能判断优先级：复用已有能力 > 修改已有流程 > 新增能力。
+  - 不确定的数据归属、规则优先级、异常处理、接口能力必须显式列为 TODO: 待确认，不得擅自假设。
+
+  证据与接口查询：
+  - 凡涉及复用已有 API / 服务方法，必须先确认签名与契约。
+  - 优先使用 GitNexus（如可用）；不可用时使用源码精确读取。
+  - 禁止推导或编造未经证据确认的接口签名、参数、返回值、字段、枚举、配置。
+  - 经查询确认需要新增接口时，必须在 design/tasks/code 中明确标注"新增接口"，并实现完整逻辑，禁止 TODO 占位。
+
+rules:
+  proposal:
+    - 关键信息不足时，先输出待确认问题，再继续生成 proposal。
+
+  specs:
+    - 只描述系统应具备的行为，不写代码实现细节。
+    - 例外场景必须在 specs 中有对应行为要求。
+
+  design:
+    - 必须遵循全局"证据与接口查询"规则。
+    - 前后端交互必须同时考虑前端能力、后端能力和接口契约。
+    - 涉及 Jev 接口预留时，必须给出 interface 定义与调用契约，标注"新增接口"。
+    - design.md 末尾列出本次 change 可复用的接口方法。
+
+  tasks:
+    - 每个任务对应明确修改点或交付物，禁止"研究一下"等模糊任务。
+    - 共享纯逻辑层任务按函数/模块拆分，标注 packages/shared。
+    - 服务端任务按分层拆分：Adapter / Validator / Selector / Gateway / ExperienceStore。
+    - 前端任务按页面/组件/路由拆分。
+    - 测试任务必须覆盖主流程、规则校验、异常路径。
+
+  apply:
+    - 严格遵循 design.md、tasks.md、编码规范和命中的 code-pattern。
+    - 代码模式优先：依据已命中的 code-pattern 自主实现。
+    - 不编造枚举值；需要状态码、类型码、场景码时读取枚举字典或源码证据。
+    - 所有 import 必须位于文件头；禁止通配符 import 与未使用 import。
+    - 业务编码、枚举值、serviceCode 必须优先落常量或配置。
+    - 每个编码任务完成后做一次自检。
